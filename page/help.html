@@ -1,0 +1,30 @@
+<!--每一个页面对应module下的一个模块-->
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="left">
+      <a href="#" class="back link"> 
+        <i class="icon icon-back"></i><span>返回</span>
+      </a>
+    </div>
+    <div class="center sliding">帮助</div>
+    <div class="right">
+      <!-- Right link contains only icon - additional "icon-only" class-->
+<!--      <a href="#" class="link icon-only open-panel"> <i class="icon icon-bars"></i></a>-->
+    </div>
+  </div>
+</div>
+<div class="pages">
+  <!-- 注意这个data-page值，对应module目录下的子模块名称-->
+  <!-- 如果值为空，则不需要定义对应的子模块目录 -->
+  <div data-page="" class="page">
+    <!-- Scrollable page content-->
+    <div class="page-content">
+      <div class="content-block">
+        <div class="content-block-inner">
+          <p>这里是帮助内容，写死的文本，不需要动态处理，如果需要动态处理，还是要需要指定data-page值...</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

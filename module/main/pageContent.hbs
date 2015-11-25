@@ -1,0 +1,57 @@
+<div class="page-content">
+  <div class="content-block">
+    <!-- tabs控制面板 -->
+    <div class="buttons-row">
+      <!-- 关联到第一个tab, 默认激活 -->
+      <a id="tabname1" href="#tab1" class="tab-link active button">待办工单(0)</a>
+      <!-- 关联到第二个tab -->
+      <a id="tabname2" href="#tab2" class="tab-link button">待办工单(1)</a>
+    </div>
+  </div>
+  <!-- Tabs, 标签内容区容器 -->
+  <div class="tabs">
+    <!-- Tab 1, 默认激活 -->
+    <div id="tab1" class="tab active">
+      <div class="content-block">
+        <form data-search-list=".list-block-search" data-search-in=".item-title" 
+              class="searchbar searchbar-init form-a">
+          <div class="searchbar-input">
+            <input type="search" placeholder="工单主题/工单编号">
+            <a href="#" class="searchbar-clear"></a>
+          </div>
+          
+        </form>
+
+        <div id="tasklist">
+          <div class="list-block margin-top-0 small-font list-block-search">
+            <ul>
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Tab 2 -->
+    <div id="tab2" class="tab">
+      <div class="content-block">
+        <!-- Search bar -->
+        <form data-search-list=".list-block-search" data-search-in=".item-title" 
+              class="searchbar searchbar-init form-b">
+          <div class="searchbar-input">
+            <input type="search" placeholder="工单主题/工单编号">
+            <a href="#" class="searchbar-clear"></a>
+          </div>
+        </form>
+        <div id="taskfinishlist" >
+          <div class="list-block margin-top-0 small-font list-block-search">
+            <ul>
+            </ul>
+          </div>
+          <div id="search-condition-clear" class="col-50">
+            <a href="#" class="button button-big button-blue search-condition-clear">清空</a>
+          </div>
+        </div>
+      </div>
+    </div><!--end of tab2-->
+  </div><!--end of tabs-->
+</div><!--end of page-content -->
