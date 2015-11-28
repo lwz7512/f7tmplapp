@@ -12,6 +12,8 @@ define(["app", "hbs!module/task-detail/pageContent"], function(app, template){
   function init(page){
     _page = page;
     
+    var flowId = _page.query.id;
+    
     console.log(page.query);
     
     //动态显示pageContent内容，当然这个操作可以在取完数据后进行，template()的参数里面可以放后台取到的数据

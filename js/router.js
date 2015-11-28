@@ -10,7 +10,7 @@ define(["js/service.cfg", "js/utils"], function(service, utils) {
     function init() {
       //for controller add listener after animation
       $(document).on('pageAfterAnimation', function(){
-        if(_controller.pageAfterAnimation){
+        if(_controller && _controller.pageAfterAnimation){
           _controller.pageAfterAnimation();
         }
       });
@@ -63,6 +63,9 @@ define(["js/service.cfg", "js/utils"], function(service, utils) {
         var currentPage = _app.getCurrentView().activePage.name;
         //the page in history reappear to client
         $(document).trigger("active", {page: currentPage});
+        //FIXED, 销毁上一个controller，防止pageAfterAnimation被调用
+        //@2015/11/28
+        _controller = null;
       });
       
       // swith among the bottom tab, and load view page
@@ -144,6 +147,6 @@ define(["js/service.cfg", "js/utils"], function(service, utils) {
       init: init,
       load: load,
       complete: complete
-  };
+    };
   
 });
