@@ -4,8 +4,8 @@
  *
  * @2015/11/25
  */
-define(["app", "hbs!module/main/pageContent", "handlebars"], 
-       function(app, template, Handlebars){
+define(["app", "hbs!module/main/pageContent"], 
+       function(app, template){
 
   var $ = Dom7;//模拟jquery的符号，这样看着舒服
   var _page;
@@ -41,6 +41,10 @@ define(["app", "hbs!module/main/pageContent", "handlebars"],
         searchList: '.list-block-search',
         searchIn: '.item-title-small'
     });
+    
+    
+    var container = Handlebars.compile("{{> infoSub}}");
+    console.log(container);
     
   }//end of init
   

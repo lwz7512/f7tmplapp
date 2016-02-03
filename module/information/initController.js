@@ -4,7 +4,8 @@
  *
  * @2015/11/25
  */
-define(["app", "hbs!module/index/pageContent"], function(app, template){
+
+define(["app", "hbs!module/information/pageContent"], function(app, template){
 
   var $ = Dom7;
   var _page;
@@ -12,25 +13,25 @@ define(["app", "hbs!module/index/pageContent"], function(app, template){
   function init(page){
     _page = page;
 
-    //动态显示pageContent内容，当然这个操作可以在取完数据后进行，template()的参数里面可以放后台取到的数据
+    //显示pageContent内容，当然这个操作可以在取完数据后进行，template()的参数里面可以放数据
     $(page.container).html(template());
 
-    //派发全局事件给uicontroller
+    //派发全局事件给
     $(document).trigger('renderComplete', {page: _page});
 
     addEventHandler();
 
+
   }//end of init
 
   function addEventHandler(){
-    //凡事添加在document上的事件，都要以安全的方式添加监听，即保证只有一个监听器
     app.utils.safeBind(document, 'active', activeHandler);
   }
 
   function activeHandler(event){
     if(event.detail.page != _page.name) return;
     //go on in current page...
-    console.log(_page.name+' is back...');
+    console.log(_page.name+'is back...');
 
   }
 

@@ -42,7 +42,7 @@ define(["app", "hbs!module/adv-search/pageContent"], function(app, template){
         
         app.f7.hideIndicator();//查询结束
         closeMe();//自动关闭当前页以显示新结果
-      }, 2000);
+      }, 3000);
       app.f7.showIndicator();//显示进度条
     });//end of query handle...
     

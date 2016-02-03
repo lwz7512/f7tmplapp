@@ -36,35 +36,33 @@
       <!-- Your main view, should have "view-main" class-->
       <div class="view view-main">
         <!-- Top Navbar-->
-        <div class="navbar">
+        <div class="navbar navbar-hidden">
           <div class="navbar-inner">
             <div class="left sliding">
-                <a href="page/help.html" class="link">帮助</a>
+                <!-- <a href="page/help.html" class="link">帮助</a> -->
             </div>
             <!-- We have home navbar without left link-->
             <div class="center sliding">家客助手</div>
 <!--            <div class="center sliding">Awesome App</div>-->
             <div class="right sliding">
-              <a href="page/adv-search.html" class="link">高级查询</a>
+              <!-- <a href="page/adv-search.html" class="link">高级查询</a> -->
             </div>
           </div>
         </div>
         <!-- Pages, because we need fixed-through navbar and toolbar, it has additional appropriate classes-->
         <div class="pages navbar-through toolbar-through">
           <!--  主模块，也就是入口模块，对应于：module/main目录 @2015/11/25 -->
-          <div data-page="main" class="page"></div>
+          <!-- <div data-page="main" class="page"></div> -->
           <!--  主模块，也就是入口模块，对应于：module/index目录 @2015/11/25 -->
-<!--          <div data-page="index" class="page"></div>-->
+         <div data-page="index" class="page no-tabbar"></div>
         </div>
         <!-- Bottom Toolbar-->
-<!--
-        <div class="toolbar">
-          <div class="toolbar-inner"><a href="#" class="link">Link 1</a><a href="#" class="link">Link 2</a></div>
-        </div>
--->
+
       </div>
+      <!-- Bottom Tabbar-->
+      
     </div>
-    
+
     <!-- hybrid mobile app communication lib, do not touch this line! -->
     <script type="text/javascript" src="cordova.js"></script>
     <!--common data process lib -->

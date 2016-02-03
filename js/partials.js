@@ -1,4 +1,16 @@
-define(["handlebars", "lib/helpers"], function(Handlebars){
+define(["handlebars", "lib/helpers"], function(){
+  
+  var infoSub = '{{#each this}}';
+  infoSub += '  <a href="page/kpi-list.html" class="item-link">              ';
+  infoSub += '    <li class="item-content">                                  ';
+  infoSub += '    <div class="item-media"><i class="icon icon-f7"></i></div> ';
+  infoSub += '    <div class="item-inner">                                   ';
+  infoSub += '    <div class="item-title">{{name}}（{{kpis.[0].values.[0].value}}分）</div>                    ';
+  infoSub += '  <div class="item-after"></div>                               ';
+  infoSub += '  </div>                                                       ';
+  infoSub += '  </li>                                                        ';
+  infoSub += '  </a>     ';
+  infoSub += '{{/each}}';
   
   //工单条目模板，下面init方法记得注册
   var task =  '{{#each this}}';
@@ -62,6 +74,7 @@ define(["handlebars", "lib/helpers"], function(Handlebars){
     //新增的模板记得在这类注册下才能在模块中使用
     Handlebars.registerPartial('task', task);
     
+    Handlebars.registerPartial('infoSub', infoSub);
   }
   
   return {
