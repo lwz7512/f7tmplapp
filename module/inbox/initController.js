@@ -27,29 +27,8 @@ define(["app", "hbs!module/inbox/pageContent"], function(app, template){
   function addEventHandler(){
     app.utils.safeBind(document, 'active', activeHandler);
 
-    $('.information').click(function(){
-      console.log('information...');
-      app.mainView.router.load({
-        url: 'page/home.html',
-        reload: true, //FIX, for fix home scroll position @2015/08/27
-      });
-    });
-
-    $('.inbox').click(function(){
-      console.log('inbox...');
-      app.mainView.router.load({
-        url: 'page/inbox.html',
-        reload: true, //FIX, for fix home scroll position @2015/08/27
-      });
-    });
-
-    $('.upload').click(function(){
-      app.mainView.router.load({
-        url: 'page/upload.html',
-        reload: true, //FIX, for fix home scroll position @2015/08/27
-      });
-    });
-
+    $('.toolbar .link').removeClass('active');
+    $('.toolbar .inbox').addClass('active');
   }
 
   function activeHandler(event){

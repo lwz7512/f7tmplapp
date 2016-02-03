@@ -22,35 +22,16 @@ define(["app", "hbs!module/home/pageContent"], function(app, template){
 
     addEventHandler();
 
+    // 显示底部工具栏
+    app.mainView.showToolbar();
 
   }//end of init
 
   function addEventHandler(){
     app.utils.safeBind(document, 'active', activeHandler);
 
-    $('.information').click(function(){
-      console.log('information...');
-      app.mainView.router.load({
-        url: 'page/home.html',
-        reload: true, //FIX, for fix home scroll position @2015/08/27
-      });
-    });
-
-    $('.inbox').click(function(){
-      console.log('inbox...');
-      app.mainView.router.load({
-        url: 'page/inbox.html',
-        reload: true, //FIX, for fix home scroll position @2015/08/27
-      });
-    });
-
-    $('.upload').click(function(){
-      app.mainView.router.load({
-        url: 'page/upload.html',
-        reload: true, //FIX, for fix home scroll position @2015/08/27
-      });
-    });
-
+    $('.toolbar .link').removeClass('active');
+    $('.toolbar .home').addClass('active');
   }
 
   function activeHandler(event){
