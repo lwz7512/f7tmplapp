@@ -25,6 +25,7 @@ define(["app", "hbs!module/home/pageContent"], function(app, template){
     // 显示底部工具栏
     app.mainView.showToolbar();
 
+    app.mainView.showNavbar();
   }//end of init
 
   function addEventHandler(){
