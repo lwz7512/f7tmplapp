@@ -9,3 +9,19 @@ framework7 template project
 * open your browser then visit: http://localhost:3000
 
 @2015/11/25
+
+
+# js optimizer with r.js/build.js:
+
+```
+$ node r.js -o build.js
+```
+
+# src optimizer with grunt:
+
+```
+$ npm install
+$ grunt
+```
+
+@2016/06/27
